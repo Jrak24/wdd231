@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Course Home Page for WDD 231">
+    <meta name="author" content="Joddy Sornsomrej">
+    <title>Course Home Page</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="images/profile.jpg" alt="Your Profile Picture" class="profile-img">
+        <span>Joddy Sornsomrej</span>
+        <button id="menu">☰</button>
+    </header>
+    <nav>
+        <ul id="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="chamber.html">Chamber</a></li>
+            <li><a href="https://github.com/Jrak24" target="_blank">GitHub Profile</a></li>
+            <li><a href="https://www.linkedin.com/in/joddy-sornsomrej-17a63930a/" target="_blank">LinkedIn</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Home</h1>
+        <section>
+            <h2>Introduction</h2>
+            <p>Welcome to my course home page for WDD 231.</p>
+        </section>
+        <section>
+            <h2>Courses</h2>
+            <div>
+                <button id="all">All Courses</button>
+                <button id="wdd">WDD Courses</button>
+                <button id="cse">CSE Courses</button>
+            </div>
+            <div id="course-container"></div>
+            <p>Total Credits: <span id="totalCredits">0</span></p>
+        </section>
+        <section>
+            <h2>Contact</h2>
+            <p>Email: jsornsomrej@gmail.com</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span> Joddy Sornsomrej | Madagascar<p>
+        <p id="lastModified"></p>
+    </footer>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+        document.getElementById("lastModified").textContent = "Last Modified: " + document.lastModified;
+    </script>
+</body>
+</html>
