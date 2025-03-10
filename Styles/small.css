@@ -42,3 +42,10 @@
     background: #f9f9f9;
     width: 200px;
 }
+
+.profile-img {
+    display: block; /* Ensure it is visible */
+    width: 80px;  /* Adjust size */
+    height: 80px;
+    border-radius: 50%; /* Makes it circular */
+}
