@@ -1,5 +1,7 @@
-// Set current year dynamically
-document.querySelector("#year").textContent = new Date().getFullYear();
+document.addEventListener("DOMContentLoaded", () => {
+    // Dynamically set the copyright year
+    document.querySelector("#copyrightYear").textContent = new Date().getFullYear();
 
-// Set last modified date dynamically
-document.querySelector("#lastModified").textContent = document.lastModified;
+    // Display the last modified date
+    document.querySelector("#lastModified").textContent = `Last Modified: ${document.lastModified}`;
+});
