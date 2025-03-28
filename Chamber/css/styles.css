@@ -1,0 +1,61 @@
+/* Main Stylesheet (css/styles.css) */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 15px;
+  }
+  
+  .member-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 10px;
+  }
+  
+  .member-card img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  footer p {
+    margin: 5px;
+  }
+  
+  /* Add other specific styles you need */
+  
+  #wireframe {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#wireframe img {
+    width: 80%; /* Adjust size */
+    max-width: 800px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}

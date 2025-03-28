@@ -3,59 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chamber of Commerce</title>
-    <link rel="stylesheet" href="new_css.css">
-    <script defer src="new.js"></script>
+    <title>Timbuktu Chamber of Commerce</title>
+    <meta name="description" content="Official website for the Timbuktu Chamber of Commerce, supporting local businesses and economic growth.">
+    <meta name="author" content="Joddy">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="images/favicon.ico">
+    <script defer src="scripts/script.js"></script>
 </head>
 <body>
-
     <header>
-        <h1>Chamber of Commerce</h1>
+        <h1>Timbuktu Chamber of Commerce</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="directory.html">Directory</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="podcast.html">Podcast</a></li>
+                <li><a href="join.html">Join</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <!-- Hero Section -->
-        <section class="hero">
-            <img src="image/hero-image.jpg" alt="Hero image">
-            <div class="hero-text">
-                <h2>Welcome to Our Chamber</h2>
-                <p>Empowering Businesses and Community Growth</p>
-                <a href="join.html" class="cta-button">Join the Chamber</a>
+        <section id="hero">
+            <img src="images/hero-image.jpg" alt="Joddy Chamber of Commerce">
+            <h2>Connecting Businesses, Building Community</h2>
+            <a href="join.html" class="cta-button">Join Now</a>
+        </section>
+
+        <!-- Events Section -->
+        <section id="events">
+            <h2>Upcoming Events</h2>
+            <p>Check out the latest events happening in our business community.</p>
+            <a href="events.html" class="cta-button">View Events</a>
+        </section>
+
+        <!-- Business Spotlight Section -->
+        <section id="spotlight">
+            <h2>Business Spotlight</h2>
+            <p>Meet our featured business members of the week.</p>
+            <div id="spotlight-container">
+                <!-- Spotlight businesses will be loaded dynamically from JavaScript -->
             </div>
-        </section>
-
-        <!-- Current Events -->
-        <section class="events">
-            <h2>Current Events</h2>
-            <p>📅 Business Expo - March 30, 2025</p>
-            <p>🎤 Networking Night - April 5, 2025</p>
-        </section>
-
-        <!-- Weather Section -->
-        <section class="weather">
-            <h2>Local Weather</h2>
-            <p id="temperature">Loading...</p>
-            <p id="weather-description"></p>
-            <p id="forecast"></p>
-        </section>
-
-        <!-- Company Spotlights -->
-        <section class="spotlights">
-            <h2>Member Spotlights</h2>
-            <div id="spotlight-container"></div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Chamber of Commerce</p>
+        <p>Contact Us: Timbuktu Chamber of Commerce | Email: info@timbuktuchamber.com | Phone: (123) 456-7890</p>
+        <p>&copy; <span id="year"></span> Timbuktu Chamber of Commerce | WDD 231 | Last Modified: <span id="lastModified"></span></p>
     </footer>
 
+    <script>
+        // JavaScript for footer date
+        document.getElementById('year').textContent = new Date().getFullYear();
+        document.getElementById('lastModified').textContent = document.lastModified;
+    </script>
 </body>
 </html>

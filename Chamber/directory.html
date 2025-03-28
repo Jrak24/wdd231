@@ -1,107 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Chamber of Commerce Directory">
-    <meta name="author" content="Joddy">
-    
-    <!-- Facebook Social Media Meta Tags -->
-    <meta property="og:title" content="Chamber of Commerce Director"/>
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="hero-image.jpg" />
-    <meta property="og:url" content="https://your-github-username.github.io/wdd231/chamber/directory.html" />
-
-    <title>Chamber of Commerce Directory</title>
-
-    <!-- Favicon -->
+    <meta name="description" content="Joddy Chamber of Commerce - Connecting Businesses in Joddy">
+    <meta name="author" content="Joddy ">
+    <meta property="og:title" content="Joddy Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="Chamber/images/hero-image.jpg">
+    <meta property="og:url" content="https://github.com/Jrak24">
+    <title>Joddy Chamber of Commerce</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/script.js"></script>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    
-    <!-- Normalize CSS -->
-    <link rel="stylesheet" href="styles.css">
-
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="css-chamber.css">
-    
-    <!-- JavaScript for Date -->
-    <script src="script.js" defer></script>
 </head>
-
 <body>
-
     <header>
+        <h1>Joddy Chamber of Commerce</h1>
         <nav>
             <ul>
-                <li><a href="directory.html">Home</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Business Directory</a></li>
+                <li><a href="join.html">Join</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="podcast.html">Podcast</a></li>
+                <li><a href="events.html">Events</a></li>
             </ul>
         </nav>
     </header>
-
     <main>
-        <h1>Chamber of Commerce Directory</h1>
-        
-        <div id="toggleView">
-            <button id="gridView" onclick="toggleView('grid')">Grid View</button>
-            <button id="listView" onclick="toggleView('list')">List View</button>
-        </div>
-
-        <section id="membersList">
-            <!-- Members will be dynamically injected here -->
+        <section>
+            <h2>Welcome to Joddy Chamber of Commerce</h2>
+            <p>Connecting local businesses and fostering economic growth in Joddy.</p>
         </section>
     </main>
-
     <footer>
-        <p>Copyright © <span id="year"></span> Brigham Young University-Idaho | All rights reserved</p>
-        <p>Last modified: <span id="lastModified"></span></p>
+        <p>Contact us: info@joddychamber.com | Phone: (+261) 347926321</p>
+        <p>&copy; <span id="year"></span> Joddy Chamber of Commerce | Last updated: <span id="lastModified"></span></p>
     </footer>
-
     <script>
-        // Function to toggle between grid and list view
-        function toggleView(view) {
-            const membersList = document.getElementById('membersList');
-            if (view === 'grid') {
-                membersList.classList.add('grid');
-                membersList.classList.remove('list');
-            } else {
-                membersList.classList.add('list');
-                membersList.classList.remove('grid');
-            }
-        }
-
-        // Fetch member data from JSON
-        async function fetchMembers() {
-            const response = await fetch('data/members.json');
-            const members = await response.json();
-
-            const membersList = document.getElementById('membersList');
-            membersList.innerHTML = ''; // Clear the list before adding new items
-
-            members.forEach(member => {
-                const memberCard = document.createElement('div');
-                memberCard.classList.add('memberCard');
-
-                memberCard.innerHTML = `
-                    <img src="images/${member.image}" alt="${member.name}">
-                    <h3>${member.name}</h3>
-                    <p>${member.address}</p>
-                    <p>${member.phone}</p>
-                    <a href="${member.website}" target="_blank">Visit Website</a>
-                `;
-
-                membersList.appendChild(memberCard);
-            });
-        }
-
-        // Set the year and last modified date
-        document.getElementById('year').textContent = new Date().getFullYear();
-        document.getElementById('lastModified').textContent = document.lastModified;
-
-        // Call the fetchMembers function to populate the directory
-        fetchMembers();
+        document.getElementById("year").textContent = new Date().getFullYear();
+        document.getElementById("lastModified").textContent = document.lastModified;
     </script>
 </body>
-
 </html>
