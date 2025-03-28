@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Joddy Chamber of Commerce</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Thank You for Joining!</h1>
+    </header>
+
+    <main>
+        <section id="confirmation">
+            <h2>Submission Received</h2>
+            <p>We appreciate your interest in joining the Timbuktu Chamber of Commerce. Below is your submitted information:</p>
+            
+            <div id="form-data">
+                <!-- Submitted data will be displayed here using JavaScript -->
+            </div>
+
+            <a href="index.html" class="cta-button">Back to Home</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Joddy Chamber of Commerce | WDD 231</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+
+    <script>
+        // JavaScript to display submitted form data
+        const params = new URLSearchParams(window.location.search);
+        const formData = `
+            <p><strong>First Name:</strong> ${params.get("firstName") || "N/A"}</p>
+            <p><strong>Last Name:</strong> ${params.get("lastName") || "N/A"}</p>
+            <p><strong>Email:</strong> ${params.get("email") || "N/A"}</p>
+            <p><strong>Phone:</strong> ${params.get("phone") || "N/A"}</p>
+            <p><strong>Business Name:</strong> ${params.get("organization") || "N/A"}</p>
+            <p><strong>Submitted On:</strong> ${params.get("timestamp") || "N/A"}</p>
+        `;
+        document.getElementById("form-data").innerHTML = formData;
+
+        // Footer year and last modified date
+        document.getElementById("year").textContent = new Date().getFullYear();
+        document.getElementById("lastModified").textContent = document.lastModified;
+    </script>
+</body>
+</html>

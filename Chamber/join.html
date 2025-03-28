@@ -1,11 +1,11 @@
-<!-- join.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Join Joddy's Chamber of Commerce</title>
+  <title>Join Joddy Chamber of Commerce</title>
   <link rel="stylesheet" href="css/styles.css">
+  <script defer src="js/script.js"></script>
 </head>
 <body>
   <header>
@@ -13,16 +13,89 @@
   </header>
   <main>
     <section>
-      <h2>Membership Benefits</h2>
-      <p>Join the chamber to receive networking opportunities, business support, and resources!</p>
-      <!-- Add your join form here -->
+      <h2>Membership Application</h2>
+      <form method="get" action="thankyou.html">
+        <label>
+          First Name:
+          <input type="text" name="firstName" required title="Enter your first name" autocomplete="given-name">
+        </label>
+        
+        <label>
+          Last Name:
+          <input type="text" name="lastName" required title="Enter your last name" autocomplete="family-name">
+        </label>
+        
+        <label>
+          Organizational Title:
+          <input type="text" name="organizationTitle" title="Enter your title" autocomplete="organization-title" pattern="^[A-Za-z\-\s]{7,}$">
+        </label>
+        
+        <label>
+          Email:
+          <input type="email" name="email" required title="Enter a valid email" autocomplete="email" placeholder="example@domain.com">
+        </label>
+        
+        <label>
+          Mobile Phone:
+          <input type="tel" name="phone" required title="Enter your mobile phone" autocomplete="tel">
+        </label>
+        
+        <label>
+          Business Name:
+          <input type="text" name="businessName" required title="Enter your business name" autocomplete="organization">
+        </label>
+        
+        <label>Membership Level:
+          <select name="membershipLevel" required>
+            <option value="np">NP Membership (Non-Profit, Free)</option>
+            <option value="bronze">Bronze Membership</option>
+            <option value="silver">Silver Membership</option>
+            <option value="gold">Gold Membership</option>
+          </select>
+        </label>
+        
+        <label>
+          Business Description:
+          <textarea name="businessDescription" title="Describe your business"></textarea>
+        </label>
+        
+        <input type="hidden" name="timestamp" id="timestamp">
+        
+        <button type="submit">Submit Application</button>
+      </form>
     </section>
+
+    <section id="membership-cards">
+      <h2>Membership Levels</h2>
+      <div class="card" id="np-card" onclick="openModal('np')">
+        <h3>NP Membership</h3>
+        <p>Free for non-profits</p>
+        <a href="#">More Info</a>
+      </div>
+      <div class="card" id="bronze-card" onclick="openModal('bronze')">
+        <h3>Bronze Membership</h3>
+        <p>Basic benefits</p>
+        <a href="#">More Info</a>
+      </div>
+      <div class="card" id="silver-card" onclick="openModal('silver')">
+        <h3>Silver Membership</h3>
+        <p>Extra benefits</p>
+        <a href="#">More Info</a>
+      </div>
+      <div class="card" id="gold-card" onclick="openModal('gold')">
+        <h3>Gold Membership</h3>
+        <p>Premium benefits</p>
+        <a href="#">More Info</a>
+      </div>
+    </section>
+
+    <div id="modal-container"></div>
   </main>
+  
   <footer>
-    <p>Contact: info@timbuktuchamber.com</p>
+    <p>Contact: info@joddychamber.com</p>
     <p>&copy; <span id="copyright-year"></span> Joddy Chamber of Commerce</p>
     <p>Last modified: <span id="last-modified"></span></p>
   </footer>
-  <script src="js/script.js"></script>
 </body>
 </html>
