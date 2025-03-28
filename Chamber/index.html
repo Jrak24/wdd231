@@ -9,11 +9,11 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="icon" href="images/favicon.ico">
-    <script defer src="scripts/script.js"></script>
+    <script defer src="scripts/main.js"></script>
 </head>
 <body>
     <header>
-        <h1>Timbuktu Chamber of Commerce</h1>
+        <h1>Joddy Chamber of Commerce</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -29,7 +29,7 @@
     <main>
         <!-- Hero Section -->
         <section id="hero">
-            <img src="images/hero-image.jpg" alt="Joddy Chamber of Commerce">
+            <img src="images/hero-image.jpg" alt="Timbuktu Chamber of Commerce">
             <h2>Connecting Businesses, Building Community</h2>
             <a href="join.html" class="cta-button">Join Now</a>
         </section>
@@ -39,6 +39,18 @@
             <h2>Upcoming Events</h2>
             <p>Check out the latest events happening in our business community.</p>
             <a href="events.html" class="cta-button">View Events</a>
+        </section>
+
+        <!-- Weather Section -->
+        <section id="weather">
+            <h2>Current Weather</h2>
+            <div id="weather-data">
+                <!-- Weather data will be injected here via JavaScript -->
+            </div>
+            <h3>3-Day Forecast</h3>
+            <div id="forecast">
+                <!-- Forecast data will be injected here -->
+            </div>
         </section>
 
         <!-- Business Spotlight Section -->
@@ -52,14 +64,9 @@
     </main>
 
     <footer>
-        <p>Contact Us: Timbuktu Chamber of Commerce | Email: info@timbuktuchamber.com | Phone: (123) 456-7890</p>
-        <p>&copy; <span id="year"></span> Timbuktu Chamber of Commerce | WDD 231 | Last Modified: <span id="lastModified"></span></p>
+        <p>Contact Us: Joddy Chamber of Commerce | Email: jsornsomrej@gmail.com | Phone: +261347926321</p>
+        <p>&copy; <span id="year"></span> Joddy Chamber of Commerce | WDD 231 | Last Modified: <span id="lastModified"></span></p>
     </footer>
 
-    <script>
-        // JavaScript for footer date
-        document.getElementById('year').textContent = new Date().getFullYear();
-        document.getElementById('lastModified').textContent = document.lastModified;
-    </script>
 </body>
 </html>
