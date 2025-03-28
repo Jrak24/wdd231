@@ -1,61 +1,66 @@
-/* Main Stylesheet (css/styles.css) */
+/* General page layout */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
-  }
-  
-  header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  nav ul {
-    list-style-type: none;
     padding: 0;
-  }
-  
-  nav ul li {
-    display: inline;
-    margin-right: 15px;
-  }
-  
-  .member-card {
-    background-color: white;
-    border: 1px solid #ddd;
-    padding: 15px;
-    margin: 10px;
-  }
-  
-  .member-card img {
-    width: 100px;
-    height: 100px;
-  }
-  
-  footer {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-  }
-  
-  footer p {
-    margin: 5px;
-  }
-  
-  /* Add other specific styles you need */
-  
-  #wireframe {
-    text-align: center;
-    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body takes at least the full height of the viewport */
 }
 
-#wireframe img {
-    width: 80%; /* Adjust size */
-    max-width: 800px;
-    border: 2px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+/* Header style */
+header {
+    background-color: #2C3E50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+header nav {
+    margin-top: 20px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2em;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main content */
+main {
+    flex: 1; /* Allow the main content to grow and fill the space */
+    padding: 40px;
+    text-align: center;
+}
+
+/* Welcome text */
+.welcome {
+    font-size: 1.5em;
+    color: #34495E;
+    margin-top: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #34495E;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.9em;
+    margin-top: auto; /* Pushes the footer to the bottom */
+}
+
+footer p {
+    margin: 0;
 }
