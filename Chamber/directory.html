@@ -1,59 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Chamber of Commerce Member Directory">
-    <meta name="author" content="Joddy Sornsomrej">
+    <meta name="description" content="Chamber of Commerce Directory">
+    <meta name="author" content="Joddy">
     
-    <!-- Social Media Meta Tags -->
-    <meta property="og:title" content="Chamber Directory">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="images/directory-image.jpg">
-    <meta property="og:url" content="http://www.yourwebsite.com/directory">
-    
-    <title>Chamber of Commerce - Member Directory</title>
-    
-    <!-- Link to Favicon -->
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    
-    <!-- Link to Stylesheet -->
-    <link rel="stylesheet" href="Styles/css-chamber.css">
+    <!-- Facebook Social Media Meta Tags -->
+    <meta property="og:title" content="Chamber of Commerce Director"/>
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="hero-image.jpg" />
+    <meta property="og:url" content="https://your-github-username.github.io/wdd231/chamber/directory.html" />
+
+    <title>Chamber of Commerce Directory</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     
     <!-- Normalize CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css-chamber.css">
+    
+    <!-- JavaScript for Date -->
+    <script src="script.js" defer></script>
 </head>
+
 <body>
 
     <header>
-        <h1>Chamber of Commerce</h1>
         <nav>
             <ul>
                 <li><a href="directory.html">Home</a></li>
-                <li><a href="contact.html">Contact</a></li>
                 <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <div class="view-toggle">
-            <button id="grid-view" onclick="toggleView('grid')">Grid View</button>
-            <button id="list-view" onclick="toggleView('list')">List View</button>
+        <h1>Chamber of Commerce Directory</h1>
+        
+        <div id="toggleView">
+            <button id="gridView" onclick="toggleView('grid')">Grid View</button>
+            <button id="listView" onclick="toggleView('list')">List View</button>
         </div>
 
-        <section id="directory" class="grid-view">
-            <!-- Members will be dynamically loaded here -->
+        <section id="membersList">
+            <!-- Members will be dynamically injected here -->
         </section>
     </main>
 
     <footer>
-        <p>&copy; <span id="current-year"></span> Chamber of Commerce | Last updated: <span id="last-modified-date"></span></p>
-        <p>Created by Joddy | WDD 231</p>
+        <p>Copyright © <span id="year"></span> Brigham Young University-Idaho | All rights reserved</p>
+        <p>Last modified: <span id="lastModified"></span></p>
     </footer>
 
-    <!-- Link to Scripts -->
-    <script src="script.js"></script>
+    <script>
+        // Function to toggle between grid and list view
+        function toggleView(view) {
+            const membersList = document.getElementById('membersList');
+            if (view === 'grid') {
+                membersList.classList.add('grid');
+                membersList.classList.remove('list');
+            } else {
+                membersList.classList.add('list');
+                membersList.classList.remove('grid');
+            }
+        }
 
+        // Fetch member data from JSON
+        async function fetchMembers() {
+            const response = await fetch('data/members.json');
+            const members = await response.json();
+
+            const membersList = document.getElementById('membersList');
+            membersList.innerHTML = ''; // Clear the list before adding new items
+
+            members.forEach(member => {
+                const memberCard = document.createElement('div');
+                memberCard.classList.add('memberCard');
+
+                memberCard.innerHTML = `
+                    <img src="images/${member.image}" alt="${member.name}">
+                    <h3>${member.name}</h3>
+                    <p>${member.address}</p>
+                    <p>${member.phone}</p>
+                    <a href="${member.website}" target="_blank">Visit Website</a>
+                `;
+
+                membersList.appendChild(memberCard);
+            });
+        }
+
+        // Set the year and last modified date
+        document.getElementById('year').textContent = new Date().getFullYear();
+        document.getElementById('lastModified').textContent = document.lastModified;
+
+        // Call the fetchMembers function to populate the directory
+        fetchMembers();
+    </script>
 </body>
+
 </html>
