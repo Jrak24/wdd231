@@ -1,0 +1,68 @@
+/* General Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #F5F5DC;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #228B22;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #228B22;
+}
+
+section {
+    margin: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 5px 0;
+}
+
+footer {
+    text-align: center;
+    background-color: #228B22;
+    color: white;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Layout Styles for Wireframe */
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+@media (min-width: 768px) {
+    .container {
+        grid-template-columns: 1fr 2fr;
+    }
+    
+    .sidebar {
+        background-color: #e0e0d1;
+        padding: 15px;
+        border-radius: 8px;
+    }
+}
