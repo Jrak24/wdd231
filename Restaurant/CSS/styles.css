@@ -157,3 +157,21 @@ body {
     margin-bottom: 15px;
   }
   
+  footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+    height: 80px; /* Set a fixed height for the footer */
+  }
+  
+  .footer-icon {
+    position: absolute;
+    right: 25px;
+    bottom: 15px;
+    width: 80px;  /* Adjust width to match footer height */
+    height: 80px; /* Adjust height to match footer height */
+    object-fit: contain;  /* Maintain aspect ratio */
+  }
+  
