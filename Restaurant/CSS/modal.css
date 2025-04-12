@@ -1,0 +1,28 @@
+#menu-modal::backdrop {
+    background: rgba(0, 0, 0, 0.6);
+  }
+  
+  .modal-inner {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    align-items: center;
+  }
+  
+  .modal-img {
+    width: 200px;
+    border-radius: 10px;
+  }
+  
+  .modal-info h2 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .modal-description {
+    margin-bottom: 1rem;
+  }
+  
+  .modal-price {
+    font-weight: bold;
+  }
+  

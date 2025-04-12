@@ -1,0 +1,39 @@
+[
+    {
+      "name": "Margherita Pizza",
+      "price": 10.99,
+      "description": "Classic pizza with tomatoes, mozzarella, and basil.",
+      "image": "Images/margherita.jpg"
+    },
+    {
+      "name": "Spaghetti Carbonara",
+      "price": 12.5,
+      "description": "Spaghetti with eggs, cheese, pancetta, and pepper.",
+      "image": "Images/carbonara.jpg"
+    },
+    {
+      "name": "Caesar Salad",
+      "price": 8.99,
+      "description": "Crisp romaine lettuce with Caesar dressing, croutons, and parmesan.",
+      "image": "Images/caesar-salad.jpg"
+    },
+    {
+      "name": "Grilled Chicken Sandwich",
+      "price": 9.75,
+      "description": "Juicy grilled chicken breast with lettuce and tomato on a brioche bun.",
+      "image": "Images/grilled-chicken.jpg"
+    },
+    {
+      "name": "Beef Tacos",
+      "price": 11.25,
+      "description": "Spiced beef tacos with fresh salsa and sour cream.",
+      "image": "Images/beef-tacos.jpg"
+    },
+    {
+      "name": "Vegetable Stir Fry",
+      "price": 10.0,
+      "description": "Colorful vegetables stir-fried with a savory sauce, served with rice.",
+      "image": "Images/veggie-stirfry.jpg"
+    }
+  ]
+  
