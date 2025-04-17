@@ -3,20 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Discover the vibrant business community of Timbuktu. Learn about our members, events, and economic impact.">
-    <meta name="author" content="Joddy">
-    <title>Discover | Joddy Chamber of Commerce</title>
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/styles.css">
-    <script defer src="scripts/script.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Discover - Joddy Chamber of Commerce</title>
+    <link rel="stylesheet" href="css/styles.css"> <!-- Make sure the stylesheet is linked correctly -->
 </head>
 <body>
-
+    <!-- Navigation -->
     <header>
-        <h1>Joddy Chamber of Commerce</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="home.html">Home</a></li>
                 <li><a href="discover.html">Discover</a></li>
                 <li><a href="directory.html">Directory</a></li>
                 <li><a href="join.html">Join Us</a></li>
@@ -26,31 +22,44 @@
         </nav>
     </header>
 
+    <!-- Main Content -->
     <main>
         <section id="intro">
-            <h2>Discover the Business Community of Joddy</h2>
+            <h1>Discover the Business Community of Joddy</h1>
             <p>Explore the local economy, meet our thriving businesses, and see how the chamber supports the community.</p>
         </section>
 
-        <section id="statistics">
+        <section id="chamber-stats">
             <h2>Chamber Stats</h2>
             <ul>
-                <li>📈 Over <strong>500</strong> registered businesses</li>
-                <li>🏆 <strong>200+</strong> networking events hosted annually</li>
-                <li>🌱 Economic growth rate: <strong>5.6%</strong> in the last year</li>
+                <li>📈 Over 500 registered businesses</li>
+                <li>🏆 200+ networking events hosted annually</li>
+                <li>🌱 Economic growth rate: 5.6% in the last year</li>
             </ul>
         </section>
 
-        <section id="gallery">
+        <section id="business-highlights">
             <h2>Local Business Highlights</h2>
-            <div class="image-grid">
-                <img src="images/business1.jpg" alt="Local business 1">
-                <img src="images/business2.jpg" alt="Local business 2">
-                <img src="images/business3.jpg" alt="Local business 3">
+            <div class="business-list">
+                <div class="business">
+                    <h3>Local business 1</h3>
+                    <p>Brief description of business 1.</p>
+                    <img src="images/business1.jpg" alt="Local business 1">
+                </div>
+                <div class="business">
+                    <h3>Local business 2</h3>
+                    <p>Brief description of business 2.</p>
+                    <img src="images/business2.jpg" alt="Local business 2">
+                </div>
+                <div class="business">
+                    <h3>Local business 3</h3>
+                    <p>Brief description of business 3.</p>
+                    <img src="images/business3.jpg" alt="Local business 3">
+                </div>
             </div>
         </section>
 
-        <section id="testimonials">
+        <section id="what-members-say">
             <h2>What Our Members Say</h2>
             <blockquote>
                 "Being part of the Chamber has helped my business grow exponentially!" – Maria, Local Boutique Owner
@@ -61,15 +70,9 @@
         </section>
     </main>
 
+    <!-- Footer -->
     <footer>
-        <p>&copy; <span id="year"></span> Joddy Chamber of Commerce | Last Updated: <span id="lastModified"></span></p>
+        <p>© 2025 Joddy Chamber of Commerce | Last Updated: 03/28/2025 17:25:29</p>
     </footer>
-
-    <script>
-        // Update Footer Dates
-        document.getElementById("year").textContent = new Date().getFullYear();
-        document.getElementById("lastModified").textContent = document.lastModified;
-    </script>
-
 </body>
 </html>
